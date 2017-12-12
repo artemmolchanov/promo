@@ -22293,7 +22293,7 @@ module.exports = new Type('tag:yaml.org,2002:timestamp', {
     /**
      * @name expectCommaSeparator
      * @description Quietly expect a comma when in tolerant mode, otherwise delegates
-     * to <code>expect(value)</code>
+     * to <discount>expect(value)</discount>
      * @since 2.0
      */
     function expectCommaSeparator() {

@@ -4,10 +4,10 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Code */
+/* @var $model app\models\Discount */
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Codes', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Discounts', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="code-view">

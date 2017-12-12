@@ -12,7 +12,7 @@ class m171209_182251_code_table extends Migration
      */
     public function safeUp()
     {
-        $this->createTable('code', [
+        $this->createTable('discount', [
             'id' => $this->primaryKey(),
             'name' => $this->string(),
             'zone' => $this->string(),

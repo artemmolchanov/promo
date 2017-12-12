@@ -7,7 +7,7 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-    'defaultRoute' => 'code/index',
+    'defaultRoute' => 'discount/index',
     'modules' => [
         'api' => [
             'class' => 'app\modules\api\Module',
@@ -53,9 +53,9 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                'api/discount/' => 'api/code/index',
-                'api/discount/<name:\w+>' => 'api/code/get-discount-info',
-                'api/discount/<name:\w+>/<zone:\w+>/activate' => 'api/code/activate-discount',
+                'api/discount/' => 'api/discount/index',
+                'api/discount/<name:\w+>' => 'api/discount/get-discount-info',
+                'api/discount/<name:\w+>/<zone:\w+>/activate' => 'api/discount/activate-discount',
 
             ],
         ],

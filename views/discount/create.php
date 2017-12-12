@@ -5,12 +5,11 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Code */
+/* @var $model app\models\Discount */
 
-$this->title = 'Update Code: ' . $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Codes', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->title = 'Create Discount';
+$this->params['breadcrumbs'][] = ['label' => 'Discounts', 'url' => ['index']];
+$this->params['breadcrumbs'][] = $this->title;
 
 $city = \app\models\City::find()->all();
 $items = ArrayHelper::map($city,'city_name','city_name');
@@ -18,7 +17,7 @@ $params = [
     'prompt' => 'Choose a city'
 ];
 ?>
-<div class="code-update">
+<div class="code-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -38,21 +37,6 @@ $params = [
 
         <div class="row">
             <div class="col-md-3">
-                <?= $form->field($model, 'name')->textInput(['maxlength' => true, ]) ?>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-3">
-                <?= $form->field($model, 'status')->dropDownList([
-                    '0' => 'deactivate',
-                    '1' => 'activate'
-                ]); ?>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-3">
                 <?= $form->field($model, 'zone')->dropDownList($items, $params); ?>
             </div>
         </div>
@@ -66,6 +50,12 @@ $params = [
 
         <div class="form-group">
             <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
+            </div>
         </div>
 
         <?php ActiveForm::end(); ?>

@@ -21,7 +21,7 @@ class ContactFormCest
         $I->see('Email cannot be blank');
         $I->see('Subject cannot be blank');
         $I->see('Body cannot be blank');
-        $I->see('The verification code is incorrect');
+        $I->see('The verification discount is incorrect');
     }
 
     public function submitFormWithIncorrectEmail(\FunctionalTester $I)
@@ -38,7 +38,7 @@ class ContactFormCest
         $I->see('Email is not a valid email address.');
         $I->dontSee('Subject cannot be blank', '.help-inline');
         $I->dontSee('Body cannot be blank', '.help-inline');
-        $I->dontSee('The verification code is incorrect', '.help-inline');        
+        $I->dontSee('The verification discount is incorrect', '.help-inline');
     }
 
     public function submitFormSuccessfully(\FunctionalTester $I)

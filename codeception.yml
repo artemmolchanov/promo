@@ -14,7 +14,7 @@ modules:
             configFile: 'config/test.php'
             cleanup: false
 
-# To enable code coverage:
+# To enable discount coverage:
 #coverage:
 #    #c3_url: http://localhost:8080/index-test.php/
 #    enabled: true

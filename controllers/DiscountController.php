@@ -2,18 +2,19 @@
 
 namespace app\controllers;
 
-use app\models\City;
 use Yii;
-use app\models\Code;
+use app\models\Discount;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * CodeController implements the CRUD actions for Code model.
+ * Class DiscountController
+ *
+ * @package app\controllers
  */
-class CodeController extends Controller
+class DiscountController extends Controller
 {
     /**
      * @inheritdoc
@@ -31,13 +32,13 @@ class CodeController extends Controller
     }
 
     /**
-     * Lists all Code models.
+     * Lists all Discount models.
      * @return mixed
      */
     public function actionIndex()
     {
         $dataProvider = new ActiveDataProvider([
-            'query' => Code::find(),
+            'query' => Discount::find(),
         ]);
 
         return $this->render('index', [
@@ -46,7 +47,7 @@ class CodeController extends Controller
     }
 
     /**
-     * Displays a single Code model.
+     * Displays a single Discount model.
      * @param integer $id
      * @return mixed
      */
@@ -59,13 +60,13 @@ class CodeController extends Controller
     }
 
     /**
-     * Creates a new Code model.
+     * Creates a new Discount model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Code();
+        $model = new Discount();
 
         if ($model->load(Yii::$app->request->post()) && $model->validate() && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -77,7 +78,7 @@ class CodeController extends Controller
     }
 
     /**
-     * Updates an existing Code model.
+     * Updates an existing Discount model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -96,7 +97,7 @@ class CodeController extends Controller
     }
 
     /**
-     * Deletes an existing Code model.
+     * Deletes an existing Discount model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -109,15 +110,15 @@ class CodeController extends Controller
     }
 
     /**
-     * Finds the Code model based on its primary key value.
+     * Finds the Discount model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Code the loaded model
+     * @return Discount the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Code::findOne($id)) !== null) {
+        if (($model = Discount::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

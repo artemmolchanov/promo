@@ -3,7 +3,7 @@
 namespace app\models;
 
 /**
- * This is the model class for table "code".
+ * This is the model class for table "discount".
  *
  * @property integer $id
  * @property string $name
@@ -13,14 +13,14 @@ namespace app\models;
  * @property integer $status
  * @property double $remuneration
  */
-class Code extends \yii\db\ActiveRecord
+class Discount extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return 'code';
+        return 'discount';
     }
 
     public function fields(){

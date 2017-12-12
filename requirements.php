@@ -106,7 +106,7 @@ $requirements = array(
         'mandatory' => false,
         'condition' => extension_loaded('memcache') || extension_loaded('memcached'),
         'by' => '<a href="http://www.yiiframework.com/doc-2.0/yii-caching-memcache.html">MemCache</a>',
-        'memo' => extension_loaded('memcached') ? 'To use memcached set <a href="http://www.yiiframework.com/doc-2.0/yii-caching-memcache.html#$useMemcached-detail">MemCache::useMemcached</a> to <code>true</code>.' : ''
+        'memo' => extension_loaded('memcached') ? 'To use memcached set <a href="http://www.yiiframework.com/doc-2.0/yii-caching-memcache.html#$useMemcached-detail">MemCache::useMemcached</a> to <discount>true</discount>.' : ''
     ),
     // CAPTCHA:
     array(
